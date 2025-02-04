@@ -29,28 +29,26 @@
           </p>
 
           <form method="post" enctype="multipart/form-data">
-            <fildset class="child-info">
+            <fieldset class="child-info">
               <legend>Informações da criança</legend>
-
               <div class="input-wrapper">
                 <label for="fullname">Nome Completo</label>
-                <input 
-                  id="fullname" 
+                <input
+                  id="fullname"
                   type="text"
-                  placeholder="Ex: Luiz Fernando" />
+                  placeholder="Ex: Luiz Fernando"
+                  required
+                />
               </div>
 
               <div class="input-wrapper">
                 <label for="birth">Data de Nascimento</label>
-                <input 
-                  id="birth" 
-                  type="date"
-                  lang="pt-br"/>
+                <input id="birth" type="date" />
               </div>
 
               <div class="select-wrapper">
                 <label for="gender">Sexo</label>
-                <select name="gender" id="gender">
+                <select name="gender" id="gender" required>
                   <option value="female">Feminino</option>
                   <option value="male">Masculino</option>
                   <option value="na">Prefiro não responder</option>
@@ -60,24 +58,33 @@
               <div class="textarea-wraper">
                 <label for="medical-info">Informações Médicas</label>
                 <textarea
-                  name="medical-info" 
+                  name="medicalInfo"
                   id="medical-info"
                   cols="30"
                   rows="10"
-                  placeholder="A criança possui alguma condição médica que a escola deve estar ciente? (Se sim, especifique.)">
-                </textarea>
+                  placeholder="A criança possui alguma condição médica que a escola deve estar ciente? (Se sim, especifique.)"
+                ></textarea>
               </div>
 
               <div class="droparea-wrapper">
-                <input type="file" id="birth-file" name="birth-file">
-                <img src="assets/icons/cloud-upload.svg" alt="">
-                <p>
-                  Clique aqui para <br>
-                  selecionar os arquivos
-                </p>
+                <label for="birth-file">
+                  <img
+                    src="assets/icons/cloud-upload.svg"
+                    alt="Ícone de upload"
+                  />
+                  <p>
+                    Clique aqui para <br />
+                    selecionar os arquivos
+                  </p>
+                </label>
+                <input
+                  type="file"
+                  id="birth-file"
+                  name="birth-file"
+                  style="display: none"
+                />
               </div>
-
-            </fildset>
+            </fieldset>
           </form>
         </div>
       </main>
